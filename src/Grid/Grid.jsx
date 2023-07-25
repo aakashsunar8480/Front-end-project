@@ -1,4 +1,4 @@
-import { Pagination,Box } from "@mui/material";
+import { Pagination, Box } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 
 export const Grid = ({ rows, loading }) => {
@@ -10,13 +10,12 @@ export const Grid = ({ rows, loading }) => {
   ];
 
   return (
-      <DataGrid
-        columns={columnData}
-        rows={rows}
-        loading={loading}
-        hideFooterPagination
-        disableRowSelectionOnClick
-      />
-    
+    <DataGrid
+      columns={columnData}
+      rows={rows}
+      loading={loading}
+      hideFooterPagination
+      disableRowSelectionOnClick
+    />
   );
 };

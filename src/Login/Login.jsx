@@ -1,7 +1,7 @@
 import { Button, Paper, Stack, TextField, Typography } from "@mui/material";
-import {  useState } from "react";
+import { useState } from "react";
 
-export const Login = ({onLogin}) => {
+export const Login = ({ onLogin }) => {
   const [loginError, setLoginError] = useState({ email: "", password: "" });
   const [userInput, setUserInput] = useState({ email: "", password: "" });
 
@@ -48,10 +48,10 @@ export const Login = ({onLogin}) => {
             label="Password"
             variant="outlined"
             onChange={(event) => {
-                setUserInput((prev) => {
-                  return { ...prev, password: event.target.value };
-                });
-              }}
+              setUserInput((prev) => {
+                return { ...prev, password: event.target.value };
+              });
+            }}
             error={loginError.password ? true : false}
             helperText={loginError.password}
           />
@@ -63,7 +63,7 @@ export const Login = ({onLogin}) => {
           onClick={() => {
             if (userInput.email && userInput.password) {
               console.log("success");
-              onLogin()
+              onLogin();
             } else {
               setLoginError({
                 email: userInput.email ? "" : "please enter a valid email",
